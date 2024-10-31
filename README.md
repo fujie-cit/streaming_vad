@@ -4,7 +4,7 @@
 
 from GitHub:
 ```bash
-pip install git+https://github.com/fujie-cit/straeming_vad.git
+pip install git+https://github.com/fujie-cit/streaming_vad.git
 ```
 
 from local directory:
