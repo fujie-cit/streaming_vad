@@ -85,8 +85,9 @@ class StreamingVAD:
 
         assert vad_unit_name in AVAILABLE_VAD_UNITS, f"Invalid VAD unit name: {vad_unit_name}"
 
-        vad_unit_config_as_dict = {}
-        if isinstance(vad_unit_config, dict):
+        if vad_unit_config is None:
+            vad_unit_config_as_dict = {}
+        elif isinstance(vad_unit_config, dict):
             vad_unit_config_as_dict = vad_unit_config
         elif isinstance(vad_unit_config, object):
             vad_unit_config_as_dict = asdict(vad_unit_config)
